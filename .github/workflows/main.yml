@@ -1,0 +1,18 @@
+---
+
+name: CI
+on: [push, pull_request]
+
+jobs:
+  build: 
+    name: build job
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: print info
+      run: |
+        pwd
+        ls -l
+    - uses: docker://chriz2600/quartus-lite
+      with:
+        args: /opt/intelFPGA_lite/18.1/quartus/bin//quartus_sh --flow compile NES
