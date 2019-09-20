@@ -15,4 +15,4 @@ jobs:
         ls -l
     - uses: docker://chriz2600/quartus-lite
       with:
-        args: /bin/bash -c "/usr/local/bin/quartus_wrapper quartus_sh --flow compile NES"
+        args: /opt/intelFPGA_lite/18.1/quartus/bin//quartus_sh --flow compile NES
