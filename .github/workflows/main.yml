@@ -10,3 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: docker://daverichmond/fpga-quartus
+      with:
+        entrypoint: quartus_sh
+        args: --flow compile NES
