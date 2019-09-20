@@ -13,6 +13,6 @@ jobs:
       run: |
         pwd
         ls -l
-    - uses: docker://daverichmond/fpga-quartus
+    - uses: docker://chriz2600/quartus-lite
       with:
-        args: xterm -e "quartus_sh --flow compile NES"
+        args: quartus_sh --flow compile NES
