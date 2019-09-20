@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: print info
+      run: |
+        pwd
+        ls -l
     - uses: docker://daverichmond/fpga-quartus
       with:
         args: xterm -e "quartus_sh --flow compile NES"
